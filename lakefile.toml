@@ -1,0 +1,12 @@
+name = "goldbach_work"
+defaultTargets = ["GoldbachWork"]
+
+# 與 CGandGameEngineLearner/goldbach-proofs 的 lean/lakefile.toml 釘選同一個 Mathlib commit，
+# 這樣在這裡編譯通過的證明，在對方的權威驗證環境也應能通過。
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "fc4f59e577feb1a4956671bc04ac18aaaf8cd842"
+
+[[lean_lib]]
+name = "GoldbachWork"
