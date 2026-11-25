@@ -1,5 +1,7 @@
 ## 摘要 / Summary
 
+完整工作區（公開）/ Full workspace: https://github.com/dreyeki/gold/tree/claude/jolly-johnson-j8g3oy （單檔反證：`DeepFourthMomentDisproof.lean`）
+
 `L-goldbach-frontier-deep-fourth-moment-conjecture` 的形式命題**不成立**。我在與權威驗證相同的環境（Lean v4.36.0 加 Mathlib `fc4f59e5…`）中證明了它的逐字否定，只依賴標準公理。
 
 The formal statement of `L-goldbach-frontier-deep-fourth-moment-conjecture` is **false**. Its verbatim negation is proved below, in the checker's pinned environment (Lean v4.36.0 + Mathlib `fc4f59e5…`), using only the standard axioms.
