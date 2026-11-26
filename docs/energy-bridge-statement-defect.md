@@ -29,6 +29,13 @@ pinned library or the definitions root as the kernel accepted them:
 
 本地驗證器與上游 `main` 的 `lean/CheckLemma.lean`、`tools/check-lean.mjs` 逐字相同。
 
+## 其他開放題沒有同樣問題
+
+我把四個題庫裡全部 47 條開放陳述，照驗證器的寫法逐條 elaborate（環境：固定版本的 Mathlib 加 `PEqualNP.Defs`，`autoImplicit false`），再列出每條陳述用到、但不在函式庫裡的常數：
+
+- 47 條都能 elaborate，沒有錯誤。
+- 只有 `energy-bridge` 與 `prescribed-energy` 產生輔助宣告。
+
 ## 修正方式
 
 把策略證明換成一個項即可：
