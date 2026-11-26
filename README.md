@@ -11,7 +11,9 @@
 | **反證 `deep-fourth-moment-conjecture`** | 平台列為開放子猜想的這條命題**不成立**。已在 Lean 中形式化反證，只依賴標準公理。見 [`DeepFourthMomentDisproof.lean`](DeepFourthMomentDisproof.lean) 與 [說明](docs/deep-fourth-moment-disproof.md)。 |
 | 獨立驗證 Siegel 零點證明 | 平台上 `no-siegel-zero` 的 8963 行證明，在相同環境下重新編譯通過，只依賴標準公理。見 [`docs/siegel-verification.md`](docs/siegel-verification.md)。 |
 | **`L-twin-primes-ap-short-error`（已被平台採納）** | GRH 下，奇數模 d 的 −2 類在窄窗上的素數和誤差界。沿用已採納的 `grh-progression-error` 證明，再推導窗口差分。以 CGandGameEngineLearner/goldbach-proofs#2817 提交，平台 verdict 為 ACCEPTED。檔案：[`submissions/L_twin_primes_ap_short_error.lean`](submissions/L_twin_primes_ap_short_error.lean)。 |
-| `L-twin-primes-rh-square-diagonal` | RH 下 Σ_{n≤X} Λ(n)² = X log X − X + O(√X log³X)。先把 GRH 證明改寫成只需 RH（模 1），得到 `RHSquare.rh_psi_bound`，再用 Abel 分部求和。本地平台驗證器判定 ACCEPTED，已交給本機 session 提交。檔案：[`submissions/L_twin_primes_rh_square_diagonal.lean`](submissions/L_twin_primes_rh_square_diagonal.lean)。 |
+| **`L-twin-primes-rh-square-diagonal`（已被平台採納）** | RH 下 Σ_{n≤X} Λ(n)² = X log X − X + O(√X log³X)。先把 GRH 證明改寫成只需 RH（模 1），得到 `RHSquare.rh_psi_bound`，再用 Abel 分部求和。以 CGandGameEngineLearner/goldbach-proofs#2823 提交，平台 verdict 為 ACCEPTED。檔案：[`submissions/L_twin_primes_rh_square_diagonal.lean`](submissions/L_twin_primes_rh_square_diagonal.lean)。 |
+| **`L-quadratic-primes-high-eventual-epsilon`（已被平台採納）** | n²+1 的高頻和最終小於任意 ε·x log x。把 QP-0052 的冪次節省估計改寫成「最終」形式，再用 log x = o(x^{1/200})。以 CGandGameEngineLearner/goldbach-proofs#2824 提交，平台 verdict 為 ACCEPTED。檔案：[`submissions/L_quadratic_primes_high_eventual_epsilon.lean`](submissions/L_quadratic_primes_high_eventual_epsilon.lean)。 |
+| `L-quadratic-primes-high-shift-exponent-extension` | 把上一條推廣到任意固定 a ≥ 1 的 n²+a，以及 1.32301 ≤ U/V ≤ 1.325。新證明 r² ≡ −a (mod p^k) 至多 4a 個根（`GoldbachWork/QPShift/RootsA.lean`），把參數打包成型別類別後重跑整個高頻論證，節省指數放寬到 x^{0.9975}。本地平台驗證器判定 ACCEPTED。檔案：[`submissions/L_quadratic_primes_high_shift_exponent_extension.lean`](submissions/L_quadratic_primes_high_shift_exponent_extension.lean)。 |
 
 ## 環境
 
