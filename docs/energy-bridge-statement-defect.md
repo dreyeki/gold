@@ -46,11 +46,16 @@ letI : NeZero (N X) := ⟨Nat.succ_ne_zero _⟩
 
 `N X = 2*X+5` 會與 `?n + 1` 統一，不需要輔助宣告。數學內容完全不變。
 
-需要改的地方：
+但已發布的陳述不能就地修改：
 
-- `research/problems.json`（兩處）
-- `research/problems/twin-primes/routes/06-theta-for-shift/tasks/L-twin-primes-energy-bridge.json`
-- `research/problems/twin-primes/routes/06-theta-for-shift/tasks/L-twin-primes-prescribed-energy.json`
+- `research/build_catalogue.py --write` 會回報 `ValueError: Frozen statement changed: L-twin-primes-energy-bridge; create a new ID`。catalogue CI 跑的就是這支。
+- 領題記錄綁定陳述位元組的 SHA-256，所以修正已發布的命題要開新 ID。
+
+因此要由維護者處理：
+
+- 撤下 `L-twin-primes-energy-bridge` 與 `L-twin-primes-prescribed-energy`。
+- 以新 ID（例如加上 `-v2`）發布修正後的陳述，並在路線裡註明替代關係。
+- 把 `L-twin-primes-endpoint` 的 `depends_on` 改成新 ID。
 
 ## 已備好的證明
 
