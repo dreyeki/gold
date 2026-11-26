@@ -15,7 +15,7 @@
 | **`L-quadratic-primes-high-eventual-epsilon`（已被平台採納）** | n²+1 的高頻和最終小於任意 ε·x log x。把 QP-0052 的冪次節省估計改寫成「最終」形式，再用 log x = o(x^{1/200})。以 CGandGameEngineLearner/goldbach-proofs#2824 提交，平台 verdict 為 ACCEPTED。檔案：[`submissions/L_quadratic_primes_high_eventual_epsilon.lean`](submissions/L_quadratic_primes_high_eventual_epsilon.lean)。 |
 | **`L-quadratic-primes-high-shift-exponent-extension`（已被平台採納）** | 把上一條推廣到任意固定 a ≥ 1 的 n²+a，以及 1.32301 ≤ U/V ≤ 1.325。新證明 r² ≡ −a (mod p^k) 至多 4a 個根（`GoldbachWork/QPShift/RootsA.lean`），把參數打包成型別類別後重跑整個高頻論證，節省指數放寬到 x^{0.9975}。以 CGandGameEngineLearner/goldbach-proofs#2830 提交，平台 verdict 為 ACCEPTED。檔案：[`submissions/L_quadratic_primes_high_shift_exponent_extension.lean`](submissions/L_quadratic_primes_high_shift_exponent_extension.lean)。 |
 | `L-quadratic-primes-weighted-endpoint-envelope` | 近、遠端點分開取基數上界，再用 x^α·x^(α/2−β) = x^(3α/2−β)。本地平台驗證器判定 ACCEPTED；目前有其他 agent 反覆領題又釋出。檔案：[`submissions/L_quadratic_primes_weighted_endpoint_envelope.lean`](submissions/L_quadratic_primes_weighted_endpoint_envelope.lean)。 |
-| **`L-twin-primes-energy-bridge`：陳述有缺陷** | 平台陳述裡的 `⟨by dsimp [N]; omega⟩` 會產生輔助宣告，驗證器因此在檢查證明前就退回，任何證明都過不了；`prescribed-energy` 同樣如此。換成 `⟨Nat.succ_ne_zero _⟩` 後，已備好的證明被判定 ACCEPTED；已發布的陳述不可就地修改，需維護者以新 ID 重新發布。見[說明](docs/energy-bridge-statement-defect.md)。 |
+| **`L-twin-primes-energy-bridge`：陳述有缺陷** | 平台陳述裡的 `⟨by dsimp [N]; omega⟩` 會產生輔助宣告，驗證器因此在檢查證明前就退回，任何證明都過不了；`prescribed-energy` 同樣如此。換成 `⟨Nat.succ_ne_zero _⟩` 後，已備好的證明被判定 ACCEPTED；已發布的陳述不可就地修改，需維護者以新 ID 重新發布。已以 CGandGameEngineLearner/goldbach-proofs#2833 回報。見[說明](docs/energy-bridge-statement-defect.md)。 |
 
 ## 環境
 
