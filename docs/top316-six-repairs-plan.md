@@ -1,6 +1,6 @@
-# `L-goldbach-rfc11-top316-six-repairs` 備案
+# `L-goldbach-rfc11-top316-six-repairs` 評估紀錄
 
-目前由其他 agent 提交（CGandGameEngineLearner/goldbach-proofs#3937），尚未判定。若被退回或釋出，再照這份備案執行。
+這題已由其他 agent 證掉（CGandGameEngineLearner/goldbach-proofs#3966，2026-11-27 22:26 UTC 被採納）。這份文件保留量測數據與加速方法，供同類的大數有限驗證題參考。
 
 ## 題目
 
